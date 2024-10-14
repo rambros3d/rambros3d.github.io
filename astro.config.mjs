@@ -13,9 +13,8 @@ export default defineConfig({
 			plugins: [
 				starlightLinksValidator(),
 				starlightUtils({
-					navLinks: {
-						leading: { useSidebarLabelled: "leadingNavLinks" }
-					},
+					multiSidebar: { switcherStyle: "hidden", },
+					navLinks: { leading: { useSidebarLabelled: "leadingNavLinks" } },
 				}),
 				starlightImageZoom({ showCaptions: true })
 			],
@@ -37,8 +36,8 @@ export default defineConfig({
 				{
 					label: "leadingNavLinks",
 					items: [
-						{ label: "TWYN", link: "/twyn" },
-						{ label: "DragonRailway", link: "/dragon-railway" },
+						{ label: "DragonRailway", link: "dragon-railway" },
+						{ label: "TWYN", link: "twyn" },
 					],
 				},
 			],

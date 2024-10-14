@@ -1,0 +1,19 @@
+---
+title: Autocoupler
+description: A guide in my new Starlight docs site.
+---
+
+Automatic coupler with easy release mechanism designed for 3D printed model trains. 
+
+All Dragon Railway [Locomotives](locomotives.md) and [Wagons](wagons.md) use the AutoCoupler.
+
+![](../../../media/dragon-railway-v1/autocoupler-demo.gif)
+
+**Assembly Manual:** [Google docs](https://docs.google.com/presentation/d/1HCa2KOX2yyTP7SEmd7yx5nFiLvS1uLYHvnnm2TKEdmc)
+
+**3D print files:** [printables.com](https://www.printables.com/model/346775)
+
+![Autocoupler assembly view](../../../media/dragon-railway-v1/autocoupler-assembly.jpg)
+
+![](../../../assets/license/by-nc-sa.svg)
+
