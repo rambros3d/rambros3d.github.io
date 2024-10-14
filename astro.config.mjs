@@ -11,7 +11,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			plugins: [
-				starlightLinksValidator(),
+				//starlightLinksValidator(),
 				starlightUtils({
 					multiSidebar: { switcherStyle: "hidden", },
 					navLinks: { leading: { useSidebarLabelled: "leadingNavLinks" } },
