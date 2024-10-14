@@ -1,11 +1,11 @@
 media:
-  input: src/assets
-  output: assets
+  input: src/media
+  output: media
 content:
-  - name: docs
-    label: Docs
+  - name: dragon-railway
+    label: DragonRailway
     type: collection
-    path: src/content/docs
+    path: src/content/dragon-railway
     view:
       fields: [ title, draft, date ]
     fields:
@@ -20,11 +20,4 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: description, label: Description, type: string }
       - { name: body, label: Body, type: rich-text }
-  - name: about
-    label: About page
-    type: file
-    path: src/pages/about.md
-    fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - { name: title, label: Title, type: string }
-      - { name: body, label: Body, type: rich-text, options: { input: public/assets, output: /assets } }
+ 
