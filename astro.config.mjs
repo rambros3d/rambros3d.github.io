@@ -7,7 +7,7 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://rambros3d.github.io',
+	site: 'https://rambros3d.com',
 	integrations: [
 		starlight({
 			plugins: [
