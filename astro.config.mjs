@@ -11,7 +11,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			plugins: [
-				//starlightLinksValidator(),
+				starlightLinksValidator(),
 				starlightUtils({
 					multiSidebar: { switcherStyle: "hidden", },
 					navLinks: { leading: { useSidebarLabelled: "leadingNavLinks" } },
@@ -32,12 +32,12 @@ export default defineConfig({
 			customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/styles/landing.css'],
 			sidebar: [
 				{ label: "DragonRailway", autogenerate: { directory: 'dragon-railway' }, },
-				{ label: "TWYN", autogenerate: { directory: 'twyn' }, },
+				//{ label: "TWYN", autogenerate: { directory: 'twyn' }, },
 				{
 					label: "leadingNavLinks",
 					items: [
 						{ label: "DragonRailway", link: "dragon-railway" },
-						{ label: "TWYN", link: "twyn" },
+						//{ label: "TWYN", link: "twyn" },
 					],
 				},
 			],
