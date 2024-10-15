@@ -29,7 +29,7 @@ export default defineConfig({
 				//github: 'https://github.com/rambros3d',
 				discord: 'https://discord.gg/pS29QSZF',
 			},
-			//customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/styles/landing.css'],
+			customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/styles/landing.css'],
 			sidebar: [
 				{ label: "DragonRailway", autogenerate: { directory: 'dragon-railway' }, },
 				{ label: "TWYN", autogenerate: { directory: 'twyn' }, },
