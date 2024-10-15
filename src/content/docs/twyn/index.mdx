@@ -1,0 +1,54 @@
+---
+title: Dragon Railway
+description: 3D printed model railway by RamBros 3D
+template: splash
+hero:
+  tagline: Tracks, Trains, and Tons of Fun – All 3D Printed!
+  image:
+    file: ../../../assets/dragon-railway-logo/dragon-railway-480.webp
+  actions:
+    - text: More info
+      link: /dragon-railway/intro
+      icon: star
+    - text: Download Models
+      link: https://makerworld.com/@rambros/collections/1010866
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { ShowcaseImage } from 'starlight-showcases'
+
+### Dragon Railway V1 Locomotives
+<ShowcaseImage
+  entries={[
+    {
+      thumbnail: import('../../../media/dragon-railway-v1/locomotive-f7-poster.jpg'),
+      //href: 'https://github.com/HiDeoo/starlight-openapi',
+      title: 'Dragon F7',
+    },
+    {
+      thumbnail: import('../../../media/dragon-railway-v1/locomotive-gp7-pers.jpg'),
+      //href: 'https://github.com/HiDeoo/starlight-obsidian',
+      title: 'Dragon GP7',
+    },
+  ]}
+/>
+
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>

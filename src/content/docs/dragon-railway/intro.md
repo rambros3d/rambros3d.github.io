@@ -1,5 +1,5 @@
 ---
-title: Dragon Railway
+title: Intro
 description: A guide in my new Starlight docs site.
 ---
 
@@ -16,10 +16,10 @@ description: A guide in my new Starlight docs site.
 
 ![](../../../media/dragon-railway-v1/dragon-railway-passby.gif)
 ### Model Categories
-- [**Locomotives**](./locomotives.md)
-- [**Cars / Wagons**](./wagons.md)
-- [**Tracks**](./tracks.md)
-- [**AutoCoupler**](./autocoupler.md)
+- [**Locomotives**](./locomotives)
+- [**Cars / Wagons**](./wagons)
+- [**Tracks**](./tracks)
+- [**AutoCoupler**](./autocoupler)
 
 ### Ways to Support
 

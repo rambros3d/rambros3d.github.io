@@ -20,16 +20,16 @@ export default defineConfig({
 			],
 			title: 'RamBros',
 			logo: {
-				light: '/src/assets/rambros-dragon-logo/rambros-dragon.svg',
-				dark: '/src/assets/rambros-dragon-logo/rambros-dragon.svg',
-				//replacesTitle: true,
+				light: '/src/assets/rambros-dragon-logo/rambros-name-svg.svg',
+				dark: '/src/assets/rambros-dragon-logo/rambros-name-dark-svg.svg',
+				replacesTitle: true,
 			},
 			social: {
-				github: 'https://github.com/rambros3d',
 				youtube: 'https://www.youtube.com/@RamBrosWorkshop',
+				//github: 'https://github.com/rambros3d',
 				discord: 'https://discord.gg/pS29QSZF',
 			},
-			customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/styles/landing.css'],
+			//customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/styles/landing.css'],
 			sidebar: [
 				{ label: "DragonRailway", autogenerate: { directory: 'dragon-railway' }, },
 				{ label: "TWYN", autogenerate: { directory: 'twyn' }, },
