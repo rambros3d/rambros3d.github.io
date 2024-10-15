@@ -7,14 +7,11 @@ hero:
   image:
     file: ../../assets/rambros-dragon-logo/rambros-dragon.svg
   actions:
-    - text: Dragon Railway
-      link: /dragon-railway/
-      icon: right-arrow
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: RamBros Workshop
+      link: https://www.youtube.com/@RamBrosWorkshop/videos
+      icon: youtube
+    - text: Download our models
+      link: https://makerworld.com/@rambros/collections/1010866
       icon: external
       variant: minimal
 ---
@@ -22,6 +19,29 @@ hero:
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import { LinkButton } from '@astrojs/starlight/components';
 import { Icon } from '@astrojs/starlight/components';
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      name: 'Dragon Railway',
+      picture: import('../../assets/dragon-railway-logo/dragon-railway-480.webp'),
+      href: '/dragon-railway',
+      description:
+        "Tracks, Trains, and Tons of Fun – All 3D Printed!",
+    },
+    {
+      name: 'TWYN',
+      picture: import('../../assets/rambros-dragon-logo/rambros-dragon.svg'),
+      href: '/twyn',
+      description:
+        'RC Heavy Vehicles – Built for Realism, Engineered for Performance',
+    },
+  ]}
+/>
+
+
+---
 
 <section class="homepage-section">
 	<div class="container" style="justify-content: center; display: flex">
