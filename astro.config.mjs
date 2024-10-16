@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import AutoImport from 'astro-auto-import';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom'
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
