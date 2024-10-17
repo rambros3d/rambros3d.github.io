@@ -21,8 +21,8 @@ export default defineConfig({
 			],
 			title: 'RamBros',
 			logo: {
-				light: '/src/assets/rambros-dragon-logo/rambros-name-svg.svg',
-				dark: '/src/assets/rambros-dragon-logo/rambros-name-dark-svg.svg',
+				light: '/src/assets/logo/rambros-name-svg.svg',
+				dark: '/src/assets/logo/rambros-name-dark-svg.svg',
 				replacesTitle: true,
 			},
 			social: {
