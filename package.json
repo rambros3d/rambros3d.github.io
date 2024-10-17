@@ -14,6 +14,7 @@
     "@astrojs/starlight": "^0.28.3",
     "@lorenzo_lewis/starlight-utils": "^0.2.0",
     "astro": "^4.15.3",
+    "astro-auto-import": "^0.4.4",
     "sharp": "^0.32.5",
     "starlight-image-zoom": "^0.8.0",
     "starlight-links-validator": "^0.12.3",
