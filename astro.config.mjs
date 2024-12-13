@@ -28,7 +28,7 @@ export default defineConfig({
 			social: {
 				youtube: 'https://www.youtube.com/@RamBrosWorkshop',
 				//github: 'https://github.com/rambros3d',
-				discord: 'https://discord.gg/pS29QSZF',
+				discord: 'https://discord.com/invite/3CKbCmZ72G',
 			},
 			customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/styles/landing.css'],
 			sidebar: [
