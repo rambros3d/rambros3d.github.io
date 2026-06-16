@@ -7,8 +7,8 @@ tags: ["electronics", "pcb"]
 ---
 
 <div class="gallery" contenteditable="false" data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="/assets/blog-16/gallery/CoilPad_11_400x.gif" data-size="350x350"><img src="/assets/blog-16/gallery/CoilPad_11_400x.gif" alt=""></a></figure>
-<figure class="gallery__item"><a href="/assets/blog-16/gallery/Nested_Sequence_10_2_400x.gif" data-size="350x350"><img src="/assets/blog-16/gallery/Nested_Sequence_10_2_400x.gif" alt=""></a></figure>
+<figure class="gallery__item"><a href="/assets/blog-16/CoilPad_11_400x.gif" data-size="350x350"><img src="/assets/blog-16/CoilPad_11_400x.gif" alt=""></a></figure>
+<figure class="gallery__item"><a href="/assets/blog-16/Nested_Sequence_10_2_400x.gif" data-size="350x350"><img src="/assets/blog-16/Nested_Sequence_10_2_400x.gif" alt=""></a></figure>
 </div>
 <p><span style="font-size: 12pt;">Source: <a href="https://microbots.io/">https://microbots.io/</a> - CoilCell and CoilPad designed by Carl Bugeja</span></p>
 <p>You might have seen these type of projects that use PCB coils to make solenoids, motors, and other actuators. If you’ve tried to make one yourself, you may have noticed that EasyEDA doesn’t have a built-in feature to create coils. Fortunately, missing features can often be added using plugins.</p>
