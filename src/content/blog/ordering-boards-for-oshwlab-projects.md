@@ -2,7 +2,7 @@
 title: 'Ordering Boards for OSHWLab Projects'
 description: 'Ordering Boards for OSHWLab Projects'
 pubDate: 'Feb 18 2025'
-heroImage: '/assets/blog-4/Article2-oshwlab-direct-order.jpg'
+heroImage: '../../assets/blog-4/Article2-oshwlab-direct-order.jpg'
 tags: ["electronics", "pcb"]
 ---
 

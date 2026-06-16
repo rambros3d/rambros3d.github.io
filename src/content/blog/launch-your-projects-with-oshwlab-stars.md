@@ -2,7 +2,7 @@
 title: 'Launch your projects with OSHWLab Stars'
 description: 'Launch your projects with OSHWLab Stars'
 pubDate: 'Feb 12 2025'
-heroImage: '/assets/blog-3/Article1-thumb2.png'
+heroImage: '../../assets/blog-3/Article1-thumb2.png'
 tags: ["electronics", "pcb"]
 ---
 

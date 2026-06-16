@@ -2,7 +2,7 @@
 title: 'Generate PCB Coils in Easyeda pro'
 description: 'Generate PCB Coils in Easyeda pro'
 pubDate: 'Apr 29 2025'
-heroImage: '/assets/blog-16/PCB-Coils-easyeda.png'
+heroImage: '../../assets/blog-16/PCB-Coils-easyeda.png'
 tags: ["electronics", "pcb"]
 ---
 

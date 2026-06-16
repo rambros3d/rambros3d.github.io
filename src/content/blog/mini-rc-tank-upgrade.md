@@ -2,7 +2,7 @@
 title: 'Mini RC tank upgrade'
 description: 'Mini RC tank upgrade'
 pubDate: 'May 15 2025'
-heroImage: '/assets/blog-18/instructable-thumb.jpg'
+heroImage: '../../assets/blog-18/instructable-thumb.jpg'
 tags: []
 ---
 

@@ -2,7 +2,7 @@
 title: 'Jump Start Your PCB Adventure'
 description: 'Jump Start Your PCB Adventure'
 pubDate: 'Mar 12 2025'
-heroImage: '/assets/blog-2/Article-3-thumb.jpg'
+heroImage: '../../assets/blog-2/Article-3-thumb.jpg'
 tags: ["electronics", "pcb"]
 ---
 
