@@ -45,7 +45,7 @@ const sideBarTopics = [
 ];
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://rambros3d.com',
   integrations: [starlight({
     title: 'RamBros Docs',
     description: 'RamBros 3D printable scale model docs.',
