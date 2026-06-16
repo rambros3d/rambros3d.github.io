@@ -22,6 +22,7 @@ const shouldRenderSearch =
 		<div class="sl-flex social-icons">
 			<SocialIcons />
 		</div>
+		<a href="/" class="btn btn-ghost btn-sm !px-2 shrink-0" style="color: var(--sl-color-text);">Blog</a>
 		<ThemeSelect />
 		<LanguageSelect />
 	</div>
@@ -68,6 +69,11 @@ const shouldRenderSearch =
 			content: '';
 			height: 2rem;
 			border-inline-end: 1px solid var(--sl-color-gray-5);
+		}
+
+		.header a.btn {
+			text-decoration: none;
+			color: var(--sl-color-text);
 		}
 
 		@media (min-width: 50rem) {

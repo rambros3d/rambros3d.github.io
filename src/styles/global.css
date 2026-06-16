@@ -3,7 +3,9 @@
 @import "./blog.css";
 
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: rambros-dark --default, rambros-light --prefersdark;
+}
 
 @theme {
   --breakpoint-xs: 480px;

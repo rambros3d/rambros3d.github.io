@@ -56,6 +56,23 @@ export default defineConfig({
       Sidebar: './src/components/starlight/Sidebar.astro',
       ThemeSelect: './src/components/starlight/ThemeSelect.astro',
     },
+    head: [
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/rambros/rambros-dragon-logo/rambros-dragon.svg',
+        },
+      },
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'icon',
+          href: '/favicon.ico',
+        },
+      },
+    ],
   }), mdx(), sitemap()],
   fonts: [
       {

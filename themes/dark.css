@@ -1,7 +1,5 @@
 @plugin "daisyui/theme" {
-    name: "dark";
-    default: true;
-    prefersdark: false;
+    name: "rambros-dark";
     color-scheme: "dark";
     --color-base-100: #282828;
     --color-base-200: #222222;
