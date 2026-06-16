@@ -1,0 +1,3 @@
+[submodule "public/rambros"]
+	path = public/rambros
+	url = https://github.com/rambros3d/rambros3d.git
