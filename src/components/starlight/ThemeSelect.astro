@@ -1,0 +1,105 @@
+---
+---
+
+<starlight-theme-select>
+	<button class="theme-toggle-btn" aria-label={Astro.locals.t('themeSelect.accessibleLabel')} type="button">
+		<svg class="icon-sys" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+		<svg class="icon-drk" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+		<svg class="icon-lgt" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+	</button>
+</starlight-theme-select>
+
+<script is:inline>
+	StarlightThemeProvider.updatePickers();
+</script>
+
+<script>
+	type Theme = 'auto' | 'dark' | 'light';
+
+	const storageKey = 'starlight-theme';
+	const ORDER: Theme[] = ['auto', 'dark', 'light'];
+
+	const parseTheme = (theme: unknown): Theme =>
+		theme === 'auto' || theme === 'dark' || theme === 'light' ? theme : 'auto';
+
+	const loadTheme = (): Theme =>
+		parseTheme(typeof localStorage !== 'undefined' && localStorage.getItem(storageKey));
+
+	function storeTheme(theme: Theme): void {
+		if (typeof localStorage !== 'undefined') {
+			localStorage.setItem(storageKey, theme === 'light' || theme === 'dark' ? theme : '');
+		}
+	}
+
+	const getPreferredColorScheme = (): Theme =>
+		matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+	function updateIcons(theme: Theme) {
+		const btn = document.querySelector('starlight-theme-select button');
+		if (!btn) return;
+		const resolved = theme === 'auto' ? getPreferredColorScheme() : theme;
+		btn.classList.remove('is-dark', 'is-light');
+		btn.classList.add(resolved === 'dark' ? 'is-dark' : 'is-light');
+	}
+
+	function onThemeChange(theme: Theme): void {
+		StarlightThemeProvider.updatePickers(theme);
+		document.documentElement.dataset.theme = theme === 'auto' ? getPreferredColorScheme() : theme;
+		storeTheme(theme);
+		updateIcons(theme);
+	}
+
+	matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
+		if (loadTheme() === 'auto') onThemeChange('auto');
+	});
+
+	class StarlightThemeSelect extends HTMLElement {
+		constructor() {
+			super();
+			onThemeChange(loadTheme());
+			this.querySelector('button')?.addEventListener('click', () => {
+				const current = loadTheme();
+				const next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
+				onThemeChange(next);
+			});
+		}
+	}
+	customElements.define('starlight-theme-select', StarlightThemeSelect);
+</script>
+
+<style>
+	@layer starlight.core {
+		.theme-toggle-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--sl-color-gray-5);
+			border-radius: 0.5rem;
+			width: 2.25rem;
+			height: 2.25rem;
+			padding: 0;
+			background-color: transparent;
+			color: var(--sl-color-text);
+			cursor: pointer;
+			transition: border-color 0.2s;
+		}
+
+		.theme-toggle-btn:hover {
+			border-color: var(--sl-color-gray-2);
+		}
+
+		.theme-toggle-btn svg {
+			display: none;
+			pointer-events: none;
+		}
+
+		.theme-toggle-btn.is-dark .icon-drk,
+		.theme-toggle-btn.is-light .icon-lgt {
+			display: block;
+		}
+
+		.theme-toggle-btn:not(.is-dark):not(.is-light) .icon-sys {
+			display: block;
+		}
+	}
+</style>

@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Navbar from '../components/Navbar.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body class="blog-page">
+		<Navbar docsLink="/blog/" />
+		<div class="blog-container">
+			<article>
+				{heroImage && (
+					<div class="blog-hero-image">
+						<Image width={1020} height={510} src={heroImage} alt="" />
+					</div>
+				)}
+				<div class="blog-title">
+					<h1>{title}</h1>
+					<p class="blog-date">
+						<FormattedDate date={pubDate} />
+						{updatedDate && (
+							<span class="blog-updated">(Last updated <FormattedDate date={updatedDate} />)</span>
+						)}
+					</p>
+				</div>
+				<div class="prose">
+					<slot />
+				</div>
+			</article>
+		</div>
+		<Footer />
+		<script is:inline src="/theme.js"></script>
+	</body>
+</html>

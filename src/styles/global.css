@@ -1,0 +1,37 @@
+@import "../../themes/dark.css";
+@import "../../themes/light.css";
+@import "./blog.css";
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --breakpoint-xs: 480px;
+}
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-exo: 'Exo 2', sans-serif;
+    --font-changa: 'Changa', sans-serif;
+    --font-martian: 'Martian Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-inter);
+  }
+
+  .heading {
+    font-family: var(--font-exo);
+  }
+
+  .ui-label {
+    font-family: var(--font-changa);
+  }
+
+  code,
+  pre,
+  :where(:is(pre, code, kbd, samp)) {
+    font-family: var(--font-martian);
+  }
+}

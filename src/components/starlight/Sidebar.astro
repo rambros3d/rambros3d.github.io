@@ -1,0 +1,16 @@
+---
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import Topics from './Topics.astro';
+---
+
+<div class="sidebar-custom">
+  <Topics />
+  <Default><slot /></Default>
+</div>
+
+<style>
+  .sidebar-custom {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

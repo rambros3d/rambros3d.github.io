@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: rambros3d/rambros3d.github.io
+  branch: main
+
+media_folder: src/assets
+public_folder: /assets
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: src/content/blog
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Publish Date, name: pubDate, widget: datetime, type: date, date_format: "MMM DD YYYY" }
+      - { label: Updated Date, name: updatedDate, widget: datetime, type: date, required: false }
+      - { label: Hero Image, name: heroImage, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: railway-docs
+    label: Dragon Railway Docs
+    label_singular: Dragon Railway Doc
+    folder: src/content/docs/railway
+    extension: mdx
+    format: yaml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: trucks-docs
+    label: Dragon Trucks Docs
+    label_singular: Dragon Trucks Doc
+    folder: src/content/docs/trucks
+    extension: mdx
+    format: yaml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }

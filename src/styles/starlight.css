@@ -1,0 +1,65 @@
+/* Import DaisyUI theme files — single source of truth */
+@import "../../themes/dark.css";
+@import "../../themes/light.css";
+
+/* Load fonts from coollabs (same as main site) */
+@import url('https://api.fonts.coollabs.io/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Changa:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Martian+Mono:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Belanosima:wght@400;500;600;700&display=swap');
+
+/* Load Phosphor Icons */
+@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css');
+
+/* RamBros Starlight Theme - Dark (default) */
+:root,
+[data-theme="dark"] {
+  --sl-color-accent-high: var(--color-primary);
+  --sl-color-accent-low: var(--color-base-100);
+  --sl-color-accent: var(--color-primary);
+  --sl-color-text: var(--color-base-content);
+  --sl-color-text-muted: oklch(65% 0 0);
+  --sl-color-bg: var(--color-base-100);
+  --sl-color-bg-nav: var(--color-base-200);
+  --sl-color-bg-sidebar: var(--color-base-200);
+  --sl-color-bg-inline-code: var(--color-base-300);
+  --sl-color-border: oklch(35% 0 0);
+  --sl-color-border-high: oklch(42% 0 0);
+  --sl-radar-glow: oklch(60% 0.18 55 / 0.15);
+  --sl-font: 'Inter', sans-serif;
+  --sl-font-mono: 'Martian Mono', monospace;
+  --sl-border-radius: 0.5rem;
+}
+
+/* RamBros Starlight Theme - Light */
+[data-theme="light"] {
+  --sl-color-accent-high: var(--color-primary);
+  --sl-color-accent-low: var(--color-base-100);
+  --sl-color-accent: var(--color-primary);
+  --sl-color-text: var(--color-base-content);
+  --sl-color-text-muted: oklch(45% 0 0);
+  --sl-color-bg: var(--color-base-100);
+  --sl-color-bg-nav: var(--color-base-200);
+  --sl-color-bg-sidebar: var(--color-base-200);
+  --sl-color-bg-inline-code: var(--color-base-300);
+  --sl-color-border: oklch(88% 0 0);
+  --sl-color-border-high: oklch(82% 0 0);
+  --sl-radar-glow: oklch(75% 0.18 55 / 0.1);
+  --sl-font: 'Inter', sans-serif;
+  --sl-font-mono: 'Martian Mono', monospace;
+  --sl-border-radius: 0.5rem;
+}
+
+/* Use Exo 2 for headings in docs */
+sl-heading,
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+}
+
+/* Use Changa for UI labels */
+sl-sidebar-item,
+sl-menu-item,
+sl-search-result {
+  font-family: 'Changa', sans-serif;
+}
