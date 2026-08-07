@@ -263,18 +263,45 @@ html.rambros-dark .blog-page :root {
 .prose * {
   margin: 0;
   padding: 0;
-  font-size: var(--font-size-m);
 }
 
 .prose > :first-child {
   margin-top: 0;
 }
 
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
+.prose h1 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+  margin: 2.5em 0 1em 0;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+  margin: 2.5em 0 1em 0;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.6;
+  margin: 2em 0 0.75em 0;
+}
+
+.prose h4 {
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.6;
+  margin: 2em 0 0.75em 0;
+}
+
+.prose h5 {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: 1.75;
-  margin: 3.75em 0 1.75em 0;
+  margin: 2em 0 0.75em 0;
 }
 
 .prose strong, .prose b {
