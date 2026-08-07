@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "daisyui": "^5.5.23"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
