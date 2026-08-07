@@ -1,0 +1,70 @@
+---
+title: 'Generate PCB Coils in Easyeda pro'
+description: 'Generate PCB Coils in Easyeda pro'
+pubDate: 'Apr 29 2025'
+heroImage: '../../assets/202504/PCB-Coils-easyeda.png'
+tags: ["electronics", "pcb"]
+---
+
+import Gallery from '../../components/Gallery.astro';
+import coilPad from '../../assets/202504/CoilPad_11_400x.gif';
+import nestedSequence from '../../assets/202504/Nested_Sequence_10_2_400x.gif';
+import coilsExamples from '../../assets/202504/coils-examples.png';
+import coilLineSegments from '../../assets/202504/coil-generator-line-segments.png';
+import extensionsManager from '../../assets/202504/extensions-manager.png';
+import importExtension from '../../assets/202504/import-extension.png';
+import selectEextFile from '../../assets/202504/select-eext-file.png';
+import pluginAdded from '../../assets/202504/plugin-added.png';
+import pcbCoilGeneratorExt from '../../assets/202504/pcb-coil-generator-extension.png';
+import clickGenerate from '../../assets/202504/click-generate.png';
+import adjustParameters from '../../assets/202504/adjust-parameters.png';
+
+<Gallery images={[
+	{ src: coilPad },
+	{ src: nestedSequence },
+]} />
+
+<p><span style="font-size: 12pt;">Source: <a href="https://microbots.io/">https://microbots.io/</a> - CoilCell and CoilPad designed by Carl Bugeja</span></p>
+<p>You might have seen these type of projects that use PCB coils to make solenoids, motors, and other actuators. If you've tried to make one yourself, you may have noticed that EasyEDA doesn't have a built-in feature to create coils. Fortunately, missing features can often be added using plugins.</p>
+<p>This article will guide you through the process of creating coils using the <strong>Coil Generator</strong> plugin. Here's some coils of different diameter, line width and line spacing generatedusing this plugin.</p>
+<p><img src={coilsExamples.src} alt="" width="600" height="775" /></p>
+<p>This plugin creates coils by drawing many small line segments, as shown in the figure below.</p>
+<h1><img src={coilLineSegments.src} alt="" width="500" height="375" /></h1>
+<p> </p>
+<p>PCB Coil Generator: <a href="#INTERNAL_LINK#/file/media/files/pcb-coil-generator_v0.0.7.eext" target="_blank" rel="noopener noreferrer">Download eext file</a></p>
+<p>Source code: <a href="https://github.com/medisoft/pcb-coil-generator">https://github.com/medisoft/pcb-coil-generator</a></p>
+<h3>Credits:</h3>
+<ul>
+<li>Mario Medina - <a href="https://oshwlab.com/osoverflow/" target="_blank" rel="noopener">oshwlab</a> | <a href="https://github.com/medisoft/" target="_blank" rel="noopener">github</a></li>
+<li>Andreasbernhofer - <a href="https://oshwlab.com/andreasbernhofer" target="_blank" rel="noopener">oshwlab</a></li>
+</ul>
+<h1>Plugin Installation:</h1>
+<p>You can skip this section if you know how to install the extension.</p>
+<p>1) Settings -> Extensions -> Extensions Manager</p>
+<p><img src={extensionsManager.src} alt="" width="600" height="375" /></p>
+<p>2) Import extensions</p>
+<p><img src={importExtension.src} alt="" width="600" height="375" /></p>
+<p>3) Choose files -> Select eext file</p>
+<p><img src={selectEextFile.src} alt="" width="600" height="375" /></p>
+<p>4) Plugin Successfully added</p>
+<p><img src={pluginAdded.src} alt="" width="600" height="375" /></p>
+<p> </p>
+<h1>How to generate Coils:</h1>
+<p>Open Extension "PCB Coil Generator"</p>
+<p><img src={pcbCoilGeneratorExt.src} alt="" width="600" height="375" /></p>
+<p>Click Generate</p>
+<p><img src={clickGenerate.src} alt="" width="600" height="375" /></p>
+<p>Adjust parameters according to your requirements</p>
+<p><img src={adjustParameters.src} alt="" width="600" height="483" /></p>
+<p>All the units are in mils ( 1 Inch = 1000 mils)</p>
+<p>After adjusting the parameters, click "Generate coil".</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>There might be a bug where the line width might be 1/10 of what you set. If you face this error, adjust the width manually after generating the coil.</li>
+</ul>
+<h3>Disclaimer:</h3>
+<ul>
+<li>Currently, this plugin can only generate circular coils. I also tested another PCB coil generator that supports both English and another language, and it can generate square coils as well - but I couldn't get it to work. I've included it in the attachments if you want to try it yourself.</li>
+<li>I haven't designed any projects using this coil generator yet. I explored PCB coil generation purely out of curiosity. If you have any project suggestions, feel free to share them - I'd be happy to make a project with PCB coils.</li>
+</ul>
+<p><em>Originally published on <a href="https://oshwlab.com/article/pcb-coil-generator" target="_blank" rel="noopener noreferrer">oshwlab.com</a></em></p>

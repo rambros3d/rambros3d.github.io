@@ -27,3 +27,6 @@ pnpm-debug.log*
 
 #reference material
 ref/
+
+# generated responsive images
+**/responsive/

@@ -14,43 +14,46 @@
 </script>
 
 <script>
-	type Theme = 'auto' | 'rambros-dark' | 'rambros-light';
+	type Theme = 'system' | 'rambros-dark' | 'rambros-light';
 
-	const storageKey = 'starlight-theme';
-	const ORDER: Theme[] = ['auto', 'rambros-dark', 'rambros-light'];
+	const storageKey = 'theme';
+	const ORDER: Theme[] = ['system', 'rambros-dark', 'rambros-light'];
 
 	const parseTheme = (theme: unknown): Theme =>
-		theme === 'auto' || theme === 'rambros-dark' || theme === 'rambros-light' ? theme : 'auto';
+		theme === 'system' || theme === 'rambros-dark' || theme === 'rambros-light' ? theme : 'system';
 
 	const loadTheme = (): Theme =>
 		parseTheme(typeof localStorage !== 'undefined' && localStorage.getItem(storageKey));
 
 	function storeTheme(theme: Theme): void {
 		if (typeof localStorage !== 'undefined') {
-			localStorage.setItem(storageKey, theme === 'rambros-light' || theme === 'rambros-dark' ? theme : '');
+			localStorage.setItem(storageKey, theme);
 		}
 	}
 
-	const getPreferredColorScheme = (): Theme =>
+	const getPreferredColorScheme = (): 'rambros-dark' | 'rambros-light' =>
 		matchMedia('(prefers-color-scheme: light)').matches ? 'rambros-light' : 'rambros-dark';
 
 	function updateIcons(theme: Theme) {
 		const btn = document.querySelector('starlight-theme-select button');
 		if (!btn) return;
-		const resolved = theme === 'auto' ? getPreferredColorScheme() : theme;
+		const resolved = theme === 'system' ? getPreferredColorScheme() : theme;
 		btn.classList.remove('is-rambros-dark', 'is-rambros-light');
 		btn.classList.add(resolved === 'rambros-dark' ? 'is-rambros-dark' : 'is-rambros-light');
 	}
 
 	function onThemeChange(theme: Theme): void {
 		StarlightThemeProvider.updatePickers(theme);
-		document.documentElement.dataset.theme = theme === 'auto' ? getPreferredColorScheme() : theme;
+		const resolved = theme === 'system' ? getPreferredColorScheme() : theme;
+		document.documentElement.dataset.theme = resolved;
+		document.documentElement.classList.toggle('rambros-dark', resolved === 'rambros-dark');
+		document.documentElement.classList.toggle('rambros-light', resolved === 'rambros-light');
 		storeTheme(theme);
 		updateIcons(theme);
 	}
 
 	matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
-		if (loadTheme() === 'auto') onThemeChange('auto');
+		if (loadTheme() === 'system') onThemeChange('system');
 	});
 
 	class StarlightThemeSelect extends HTMLElement {

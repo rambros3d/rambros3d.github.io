@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	images: {
+		src: ImageMetadata;
+		alt?: string;
+		link?: ImageMetadata;
+	}[];
+	columns?: number;
+}
+
+const { images, columns = 2 } = Astro.props;
+---
+
+<div class="blog-gallery" style={`grid-template-columns: repeat(${columns}, 1fr);`}>
+	{images.map(({ src, alt = '', link }) => (
+		<figure class="blog-gallery__item">
+			{link ? (
+				<a href={link.src}>
+					<Image src={src} alt={alt} width={800} height={600} loading="lazy" />
+				</a>
+			) : (
+				<Image src={src} alt={alt} width={800} height={600} loading="lazy" />
+			)}
+		</figure>
+	))}
+</div>
+
+<style>
+	.blog-gallery {
+		display: grid;
+		gap: 1rem;
+		margin: 1.5rem 0;
+	}
+	.blog-gallery__item {
+		margin: 0;
+	}
+	.blog-gallery__item :global(img) {
+		width: 100%;
+		height: auto;
+		border-radius: 0.5rem;
+	}
+</style>

@@ -12,8 +12,9 @@ interface Props {
 const { title, description, docsLink } = Astro.props;
 ---
 
-<html lang="en" data-theme="rambros-dark">
+<html lang="en">
 	<head>
+		<script is:inline src="/theme-init.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />

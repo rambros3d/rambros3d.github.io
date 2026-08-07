@@ -1,3 +1,11 @@
+/* External imports must precede all other statements (PostCSS requirement) */
+@import url('https://api.fonts.coollabs.io/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Changa:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Martian+Mono:wght@400;500;600;700&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Belanosima:wght@400;500;600;700&display=swap');
+@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css');
+
 /* Import DaisyUI theme files — single source of truth */
 @import "../../themes/dark.css";
 @import "../../themes/light.css";
@@ -7,16 +15,6 @@
 @plugin "daisyui" {
   themes: rambros-dark --default, rambros-light --prefersdark;
 }
-
-/* Load fonts from coollabs (same as main site) */
-@import url('https://api.fonts.coollabs.io/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://api.fonts.coollabs.io/css2?family=Exo+2:wght@400;500;600;700&display=swap');
-@import url('https://api.fonts.coollabs.io/css2?family=Changa:wght@400;500;600;700&display=swap');
-@import url('https://api.fonts.coollabs.io/css2?family=Martian+Mono:wght@400;500;600;700&display=swap');
-@import url('https://api.fonts.coollabs.io/css2?family=Belanosima:wght@400;500;600;700&display=swap');
-
-/* Load Phosphor Icons */
-@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css');
 
 /* RamBros Starlight Theme - Dark (default) */
 :root,

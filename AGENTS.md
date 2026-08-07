@@ -41,7 +41,7 @@ src/
       trucks/      — Dragon Trucks documentation
   layouts/         — BlogPost, LandingLayout
   pages/           — Astro page routes
-public/            — static assets (favicon, images, logos)
+public/            — static assets (favicon, logos)
 themes/            — CSS theme files (rambros.css, rambros-light.css)
 dist/              — build output (do not edit)
 ```

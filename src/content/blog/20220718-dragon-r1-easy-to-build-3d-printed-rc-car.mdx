@@ -1,0 +1,174 @@
+---
+title: 'Dragon R1 - Easy to Build 3D Printed RC Car'
+description: 'Hey folks, I have been interested in 3D printed RC projects for a while now. Over the past year I have been designing and 3D printing scale model parts. So I decided to make an RC racing car inspired by concept cars.'
+pubDate: 'Jul 17 2022'
+heroImage: '../../assets/202207/Dragon-R1-Thumbnail.jpg'
+tags: ['3dprinting']
+---
+
+import Gallery from '../../components/Gallery.astro';
+import introGif1 from '../../assets/202207/FAWPPBGL5JM5SZC.gif';
+import introGif2 from '../../assets/202207/FSDHV7FL5MH63NI.gif';
+import supplyThumb1 from '../../assets/202207/F0CKQASL5GRATF8-thumbnail.jpg';
+import supplyThumb2 from '../../assets/202207/FFIZ4IOL5GRARYB-thumbnail.jpg';
+import designGif1 from '../../assets/202207/FD6B6YPL5FBTGKP.gif';
+import designGif2 from '../../assets/202207/FIZO8F1L5FBTGOB.gif';
+import designGif3 from '../../assets/202207/F01D1W6L5FBTGME.gif';
+import designGif4 from '../../assets/202207/FK5YL2LL5FBTGNS.gif';
+import designThumb1 from '../../assets/202207/F54ZIL9L5FBTGSK-thumbnail.jpg';
+import printThumb1 from '../../assets/202207/FWOGIU3L5S6TGX2-thumbnail.png';
+import printGif1 from '../../assets/202207/F58G98YL5I6Q772.gif';
+import printGif2 from '../../assets/202207/FS3CGZ3L5I6QA7H.gif';
+import printGif3 from '../../assets/202207/FU2W2MZL5I6Q9YB.gif';
+import printThumb2 from '../../assets/202207/F19GM64L5GRATSG-thumbnail.jpg';
+import raceGif1 from '../../assets/202207/F88XPJXL5JM555E.gif';
+import raceGif2 from '../../assets/202207/FBKJ121L5MH637Q-2.gif';
+import raceThumb1 from '../../assets/202207/FTMHV8NL52GUA0S-2-thumbnail.jpg';
+import raceThumb2 from '../../assets/202207/F7ODNM2L52GUA0X-thumbnail.jpg';
+
+Hey folks,
+
+I have been interested in 3D printed RC projects for a while now. Over the past year I have been designing and 3D printing scale model parts. So I decided to make an **RC racing car** inspired by concept cars. These are the features which I liked to incorporate in this design;
+
+- Maximum 3D printed parts
+- Easy to source hardware
+- Simple Assembly
+- Easy maintenance and battery access
+- Dual wishbone suspension
+- Open differential
+- Low noise drive (using Blheli ESC)
+- Printable with a 200mm size printer
+
+If you want to add some more cool features, Go ahead; The whole project is Open Source.
+
+<Gallery images={[
+	{ src: introGif1 },
+	{ src: introGif2 },
+]} />
+
+## Supplies
+
+**3d printing:**
+- PLA filament - around 800g required
+- Flexible filament - for tyres
+
+**Hardware:**
+- 608 bearing - 6pcs
+- M3 Screws:
+  - M3 8mm - 35pcs
+  - M3 12mm - 22pcs
+  - M3 16mm - 4pcs
+  - M3 20mm - 10pcs
+- Ø2mm rod - 16mm
+- Rubber bands
+
+**Electronics:**
+- Generic 2212 BLDC motor
+- ESC (Blheli ESC recommended)
+- 9g Servo
+- 2-3S Lithium Battery
+- RC Transmitter and Receiver
+
+<Gallery images={[
+	{ src: supplyThumb1 },
+	{ src: supplyThumb2 },
+]} />
+
+The total cost was **~$40** (excluding transmitter and receiver), The cost may vary depending on your location.
+
+**Required Tools:**
+- Screw driver
+- Cutting Pliers
+- Ruler
+- Glue Gun
+- Hobby knife
+- Soldering Iron
+
+## 1: A Look Into the Design
+
+I have used maximum 3D printed parts and common hardware like **608 skateboard bearings**. Thus it should be easy for anyone to source them.
+
+The motor used here is a **generic A2212 BLDC motor**, this has enough power to reach good speeds without any heating issues.
+
+The power from the motor is distributed to the rear wheels with an **open differential**.
+
+The wishbone suspension uses common rubber bands, its works well.
+
+A maintenance door is added to the underside of the car to allow easy access of the electronics and battery.
+
+Likewise I have managed to use the least number of parts to simplify the assembly process without much trade-off in features.
+
+Model is **1/12 scale;**
+- length: 396mm
+- width: 164mm
+- height: 71mm
+
+This project is designed in **Fusion 360**, all the source CAD files are provided here.
+
+<Gallery images={[
+	{ src: designGif1 },
+	{ src: designGif2 },
+	{ src: designGif3 },
+	{ src: designGif4 },
+	{ src: designThumb1 },
+]} />
+
+## 2: 3D Printing the Parts
+
+The parts can be printed with any 200mm size printer. I recommend Cura Slicer since it is perfect for small parts and supports are much better. It is recommended to use rafts for small parts like gears.
+
+PLA is recommended for all the parts. I have used Orange and Grey for a nice Dual colour look.
+
+The tyres need to be printed with a flexible material like TPU.
+
+Some parts are intricate and require a well calibrated printer to work well. So please start by printing the test print, this can help to check if your printer/ print settings are good.
+
+<Gallery images={[
+	{ src: printThumb1 },
+	{ src: printGif1 },
+	{ src: printGif2 },
+	{ src: printGif3 },
+	{ src: printThumb2 },
+]} />
+
+[Download STLs from Printables](https://www.printables.com/model/240045-dragon-r1-open-source-rc-car)
+
+## 3: Lets Build It
+
+The assembly process is divided into 3 main parts:
+
+**Rear chassis**
+- Rear axle
+- Differential
+- Rear Suspension
+
+**Front chassis**
+- Steering mechanism
+- Front suspension
+
+**Body assembly**
+- Base chassis
+- Body
+
+Finally connect the electronics, check the servo and motor direction. You're good to go
+
+## 4: Race!!!
+
+The performance is impressive for a 3D printed RC car. The car runs effortlessly on flat surfaces like Asphalt, Parking lots, etc. Drifting is also possible on smooth surfaces.
+
+<Gallery images={[
+	{ src: raceGif1 },
+	{ src: raceGif2 },
+	{ src: raceThumb1 },
+	{ src: raceThumb2 },
+]} />
+
+If you like this Go ahead and build one!
+
+**Print! Build! Race!**
+
+What do you like about this design? Share your experience with us!
+
+Join our community at [Discord](https://discord.com/invite/3CKbCmZ72G)
+
+Originally published on [instructables.com](https://www.instructables.com/3D-Printed-RC-Car-Open-Source/)
