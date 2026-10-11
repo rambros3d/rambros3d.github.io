@@ -1,0 +1,274 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+---
+
+<LandingLayout
+	title="Project 30k - RamBros 3D"
+	description="Project 30k: 1/4 scale, 45cm tall humanoid robot with 36 motorized joints, based on DUMMY13 3D printable armor with custom internal robotics."
+	docsLink="/home/"
+>
+
+<!-- Hero Section -->
+<section class="py-24 px-4">
+	<div class="relative z-10 max-w-4xl mx-auto text-center">
+		<img
+			src="/images/project30k/Humanoid Front.png"
+			alt="Project 30k 45cm Humanoid Robot"
+			class="w-48 sm:w-60 mx-auto mb-8 drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+		/>
+		<h1 class="text-5xl md:text-6xl font-bold mb-4" style="font-family: 'Belanosima', sans-serif;">
+			Project 30k
+		</h1>
+		<p class="text-xl text-base-content/75 mb-6 max-w-2xl mx-auto leading-relaxed">
+			What if DUMMY13 wasn’t just a posable desk figure, but an actual moving robot? Standing <strong>45cm tall</strong> with <strong>36 motorized joints</strong>, Project 30k packs miniature motors, custom gearboxes, and driver boards right inside the armor.
+		</p>
+		<div class="flex flex-wrap justify-center gap-3 text-sm text-base-content/60">
+			<span class="badge badge-outline">1/4 Scale (45 cm)</span>
+			<span class="badge badge-outline">36 Motorized Joints</span>
+			<span class="badge badge-outline">DUMMY13 Form</span>
+			<span class="badge badge-outline">Fully 3D Printed</span>
+		</div>
+	</div>
+</section>
+
+<!-- Specifications Grid & The Idea Section with Front & Rear Views -->
+<section class="py-16 px-4 bg-base-200/40">
+	<div class="max-w-4xl mx-auto">
+		<div class="text-center mb-12">
+			<p class="text-primary font-semibold tracking-wide uppercase text-sm mb-3">The Idea</p>
+			<h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: 'Belanosima', sans-serif;">
+				Bringing DUMMY13 to Life
+			</h2>
+			<p class="text-base-content/75 leading-relaxed max-w-2xl mx-auto mb-10">
+				Like many makers, we loved printing and posing DUMMY13. But we kept wondering: what would it take to make it move on its own? To fit real motors, gearboxes, and electronics inside without losing the iconic look, we scaled it up to 45cm (1/4 scale).
+			</p>
+
+			<!-- Front and Rear View in The Idea Section -->
+			<div class="grid grid-cols-2 gap-4 sm:gap-8 max-w-xl mx-auto mb-12 items-end">
+				<div class="bg-base-200/80 rounded-2xl p-4 sm:p-6 border border-base-content/5 text-center">
+					<img
+						src="/images/project30k/Humanoid Front.png"
+						alt="Project 30k Humanoid - Front View"
+						class="w-44 sm:w-56 mx-auto drop-shadow-xl transition-transform duration-500 hover:scale-105"
+					/>
+					<p class="text-xs sm:text-sm font-semibold text-base-content/70 mt-3" style="font-family: 'Changa', sans-serif;">Front View</p>
+				</div>
+				<div class="bg-base-200/80 rounded-2xl p-4 sm:p-6 border border-base-content/5 text-center">
+					<img
+						src="/images/project30k/Humanoid Rear.png"
+						alt="Project 30k Humanoid - Rear View"
+						class="w-44 sm:w-56 mx-auto drop-shadow-xl transition-transform duration-500 hover:scale-105"
+					/>
+					<p class="text-xs sm:text-sm font-semibold text-base-content/70 mt-3" style="font-family: 'Changa', sans-serif;">Rear View</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+			<div class="bg-base-200 rounded-xl p-5 text-center">
+				<div class="text-3xl font-bold text-primary mb-1" style="font-family: 'Belanosima', sans-serif;">45 cm</div>
+				<div class="text-sm text-base-content/60">Height</div>
+			</div>
+			<div class="bg-base-200 rounded-xl p-5 text-center">
+				<div class="text-3xl font-bold text-primary mb-1" style="font-family: 'Belanosima', sans-serif;">1/4</div>
+				<div class="text-sm text-base-content/60">Scale</div>
+			</div>
+			<div class="bg-base-200 rounded-xl p-5 text-center">
+				<div class="text-3xl font-bold text-primary mb-1" style="font-family: 'Belanosima', sans-serif;">36</div>
+				<div class="text-sm text-base-content/60">Motorized Joints</div>
+			</div>
+			<div class="bg-base-200 rounded-xl p-5 text-center">
+				<div class="text-3xl font-bold text-primary mb-1" style="font-family: 'Belanosima', sans-serif;">Built-In</div>
+				<div class="text-sm text-base-content/60">Limb Driver PCBs</div>
+			</div>
+	</div>
+</section>
+
+<!-- Section 1: Torso & Core -->
+<section class="py-20 px-4">
+	<div class="max-w-4xl mx-auto">
+		<div class="text-center mb-16">
+			<p class="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Core & Body</p>
+			<h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Belanosima', sans-serif;">
+				The Torso: Central Hub & Waist Rotation
+			</h2>
+			<p class="text-base-content/65 max-w-2xl mx-auto">
+				The torso serves as the central anchor connecting the spine, arms, and hips, balancing strength with internal space for cabling and power.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+			<div class="bg-base-200 rounded-2xl p-8 text-center border border-base-content/5">
+				<img
+					src="/images/project30k/Legs.png"
+					alt="Project 30k Pelvis & Waist Drive Cutaway"
+					class="w-56 mx-auto drop-shadow-lg hover:scale-105 transition-transform duration-300"
+					loading="lazy"
+				/>
+				<p class="text-xs sm:text-sm text-base-content/60 mt-4">
+					Cutaway view highlighting the top geared waist rotation unit and pelvic structural cradle.
+				</p>
+			</div>
+
+			<div class="space-y-6">
+				<div class="bg-base-200 rounded-xl p-6">
+					<h4 class="font-bold text-lg mb-2 flex items-center gap-2">
+						<span class="badge badge-primary badge-sm">Waist Yaw</span>
+						Planetary Reduction Rotation
+					</h4>
+					<p class="text-base-content/75 text-sm leading-relaxed">
+						Right at the waistline, a compact gearbox drives the central rotation axis. This lets the torso pivot smoothly over the hips without twisting cables or placing stress on the hip mounts.
+					</p>
+				</div>
+
+				<div class="bg-base-200 rounded-xl p-6">
+					<h4 class="font-bold text-lg mb-2 flex items-center gap-2">
+						<span class="badge badge-primary badge-sm">Chassis Frame</span>
+						Snap-Fit Modular Armor
+					</h4>
+					<p class="text-base-content/75 text-sm leading-relaxed">
+						The chest, abdomen, and back armor snap securely onto an inner rigid chassis. The cavity within the chest protects central distribution wiring, keeping the exterior look clean and completely true to the DUMMY13 silhouette.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Section 2: Arms & Shoulders -->
+<section class="py-20 px-4 bg-base-200/50">
+	<div class="max-w-5xl mx-auto">
+		<div class="text-center mb-16">
+			<p class="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Arms & Kinematics</p>
+			<h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Belanosima', sans-serif;">
+				Geared Arms & Elbows
+			</h2>
+			<p class="text-base-content/65 max-w-2xl mx-auto">
+				Lightweight, responsive, and easy to take apart when testing new poses or gestures.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+			<div class="bg-base-200 rounded-2xl p-8 text-center border border-base-content/5">
+				<div class="flex justify-center gap-6 mb-4">
+					<div class="text-center">
+						<img
+							src="/images/project30k/Arm Front.png"
+							alt="Project 30k Arm Front Mechanism"
+							class="w-36 drop-shadow-md hover:scale-105 transition-transform duration-300 mx-auto"
+							loading="lazy"
+						/>
+						<span class="text-xs text-base-content/50 mt-1 block">Front Mechanism</span>
+					</div>
+					<div class="text-center">
+						<img
+							src="/images/project30k/Arm Rear.png"
+							alt="Project 30k Arm Rear Mechanism"
+							class="w-36 drop-shadow-md hover:scale-105 transition-transform duration-300 mx-auto"
+							loading="lazy"
+						/>
+						<span class="text-xs text-base-content/50 mt-1 block">Rear Shell</span>
+					</div>
+				</div>
+				<p class="text-xs sm:text-sm text-base-content/60">
+					Interlocking gear teeth at the elbow with internal mounting channels for motors and fasteners.
+				</p>
+			</div>
+
+			<div class="space-y-6">
+				<div class="bg-base-200 rounded-xl p-6">
+					<h4 class="font-bold text-lg mb-2 flex items-center gap-2">
+						<span class="badge badge-secondary badge-sm">Joint Design</span>
+						Printed Interlocking Gear Teeth
+					</h4>
+					<p class="text-base-content/75 text-sm leading-relaxed">
+						Each elbow features circular gear sectors printed directly into the arm chassis. The teeth mesh securely with the motor pinion, giving smooth motion and holding arm positions without sagging or wobbling.
+					</p>
+				</div>
+
+				<div class="bg-base-200 rounded-xl p-6">
+					<h4 class="font-bold text-lg mb-2 flex items-center gap-2">
+						<span class="badge badge-secondary badge-sm">Maintenance</span>
+						Easy to Take Apart & Tune
+					</h4>
+					<p class="text-base-content/75 text-sm leading-relaxed">
+						Everything fastens with standard metric screws. If a gear needs a tweak or a motor needs replacing, you can open an individual arm section in minutes without taking apart the whole torso.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Section 3: Legs & Locomotion -->
+<section class="py-20 px-4">
+	<div class="max-w-5xl mx-auto">
+		<div class="text-center mb-16">
+			<p class="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Legs & Movement</p>
+			<h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Belanosima', sans-serif;">
+				Built to Stand, Balance, and Walk
+			</h2>
+			<p class="text-base-content/65 max-w-2xl mx-auto">
+				Two legs carry the entire weight of the robot. We focused on strong joints, smart weight distribution, and clean wiring.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-12">
+			<div class="text-center bg-base-200 rounded-2xl p-6 border border-base-content/5">
+				<img
+					src="/images/project30k/Legs Front.png"
+					alt="Project 30k Legs Assembly - Front View"
+					class="w-48 mx-auto mb-4 drop-shadow-md hover:scale-105 transition-transform duration-300"
+					loading="lazy"
+				/>
+				<h4 class="font-bold text-lg mb-1" style="font-family: 'Belanosima', sans-serif;">Outer Armor</h4>
+				<p class="text-sm text-base-content/60">Snap-fit thigh and shin shells that protect the internal mechanics.</p>
+			</div>
+
+			<div class="text-center bg-base-200 rounded-2xl p-6 border border-base-content/5">
+				<img
+					src="/images/project30k/Legs.png"
+					alt="Project 30k Legs Mechatronics Cutaway"
+					class="w-48 mx-auto mb-4 drop-shadow-md hover:scale-105 transition-transform duration-300"
+					loading="lazy"
+				/>
+				<h4 class="font-bold text-lg mb-1" style="font-family: 'Belanosima', sans-serif;">Internal Drivetrain</h4>
+				<p class="text-sm text-base-content/60">A look inside: geared joints, motors, and embedded driver boards.</p>
+			</div>
+
+			<div class="text-center bg-base-200 rounded-2xl p-6 border border-base-content/5">
+				<img
+					src="/images/project30k/Legs Rear.png"
+					alt="Project 30k Legs Rear View"
+					class="w-48 mx-auto mb-4 drop-shadow-md hover:scale-105 transition-transform duration-300"
+					loading="lazy"
+				/>
+				<h4 class="font-bold text-lg mb-1" style="font-family: 'Belanosima', sans-serif;">Rear Gear Teeth</h4>
+				<p class="text-sm text-base-content/60">Knee gear racks and ankle linkage rods for firm footing.</p>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="bg-base-200 rounded-xl p-6">
+				<h4 class="font-bold text-lg mb-2 flex items-center gap-2">
+					<span class="badge badge-primary badge-sm">Hips & Knees</span>
+					Geared Reduction Under Load
+				</h4>
+				<p class="text-base-content/75 text-sm leading-relaxed">
+					Each hip uses paired bevel and spur gears to keep the robot upright without slipping, while the knees use interlocking gear sectors to take the mechanical stress off the motor shafts.
+				</p>
+			</div>
+			<div class="bg-base-200 rounded-xl p-6">
+				<h4 class="font-bold text-lg mb-2 flex items-center gap-2">
+					<span class="badge badge-primary badge-sm">Electronics</span>
+					Driver Boards Inside the Limbs
+				</h4>
+				<p class="text-base-content/75 text-sm leading-relaxed">
+					Instead of running a bulky bundle of wires from the torso down to each foot, custom driver boards sit directly inside channels in the thighs and shins. It keeps things tidy and prevents broken wires when joints bend.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+</LandingLayout>
