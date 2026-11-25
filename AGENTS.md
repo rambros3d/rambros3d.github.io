@@ -59,43 +59,12 @@ dist/              — build output (do not edit)
 
 - **Lightweight builds**: HTML/CSS preferred. Minimize JavaScript. The site should be static-first.
 - **No unnecessary JS**: Avoid adding JS dependencies unless absolutely required. Astro handles what little interactivity is needed.
-- **Content Management**: Sveltia CMS is configured for Git-based content editing via `public/admin/`.
 
 ## Adding New Content
 
 - **Blog post:** Create a `.md`/`.mdx` file in `src/content/blog/` with proper frontmatter.
 - **Doc page:** Create a `.mdx` file in `src/content/docs/railway/` or `src/content/docs/trucks/` following Starlight conventions.
 - **New page:** Add a `.astro` file in `src/pages/`.
-
-## Sveltia CMS
-
-The CMS is configured at `public/admin/` for Git-based content management.
-
-- **Admin URL:** `/admin/` (e.g., `https://rambros3d.github.io/admin/`)
-- **Config:** `public/admin/config.yml` — defines backend (GitHub), collections, and media storage
-- **Backend:** GitHub (`rambros3d/rambros3d.github.io`, main branch)
-- **Media:** Stored in `src/assets/`, served from `/assets/`
-
-### CMS Collections
-
-| Collection | Folder | Format | Fields |
-|---|---|---|---|
-| Blog Posts | `src/content/blog/` | YAML frontmatter + Markdown | title, description, pubDate, updatedDate, heroImage, body |
-| Dragon Railway Docs | `src/content/docs/railway/` | YAML frontmatter + MDX | title, description, body |
-| Dragon Trucks Docs | `src/content/docs/trucks/` | YAML frontmatter + MDX | title, description, body |
-
-### Accessing the CMS
-
-1. Deploy the site to GitHub Pages
-2. Navigate to `https://rambros3d.github.io/admin/`
-3. Authenticate with GitHub (requires write access to the repo)
-4. Edit content through the web UI — changes commit directly to the repo
-
-### Important Notes
-
-- The CMS uses CDN-loaded JS (`@sveltia/cms`) — no npm install required
-- Blog post `heroImage` uses relative paths to `src/assets/`
-- Docs use MDX (Starlight) — advanced MDX features may need manual editing
 
 ## Site Config
 
